@@ -47,6 +47,10 @@
           action = "buffers";
           options.desc = "Buffer";
         };
+        "<leader>ff" = {
+          action = "files()";
+          options.desc = "File";
+        };
       };
     };
     telescope.enable = true;
