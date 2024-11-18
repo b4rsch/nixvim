@@ -9,5 +9,10 @@
       action = "<CMD>NvimTreeToggle<CR>";
       options.desc = "Toggle NvimTree";
     }
+    {
+      key = "<leader>lg";
+      action = "<CMD>LazyGit<CR>";
+      options.desc = "Open LazyGit";
+    }
   ];
 }

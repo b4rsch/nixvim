@@ -1,5 +1,5 @@
 {
-  plugins = {
+ plugins = {
     auto-save.enable = true;
 
     gitsigns = {
