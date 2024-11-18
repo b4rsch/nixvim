@@ -48,7 +48,7 @@
           options.desc = "Buffer";
         };
         "<leader>ff" = {
-          action = "files()";
+          action = "files";
           options.desc = "File";
         };
       };
