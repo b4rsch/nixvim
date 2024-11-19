@@ -14,5 +14,16 @@
       action = "<CMD>LazyGit<CR>";
       options.desc = "Open LazyGit";
     }
+    {
+      key = "<leader>t";
+      action = "<CMD>ToggleTerm<CR>";
+      options.desc = "Terminal";
+    }
+    {
+      mode = "t";
+      key = "<C-q>";
+      action = "<CMD>q<CR>";
+      options.desc = "Terminal";
+    }
   ];
 }

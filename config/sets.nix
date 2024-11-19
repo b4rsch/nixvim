@@ -1,5 +1,5 @@
 {
- plugins = {
+  plugins = {
     auto-save.enable = true;
 
     gitsigns = {
@@ -72,7 +72,7 @@
     };
     render-markdown.enable = true;
     todo-comments.enable = true;
-
+    comment.enable = true;
     treesitter = {
       enable = true;
 
@@ -80,6 +80,11 @@
       settings.indent.enable = true;
     };
 
+    toggleterm = {
+      enable = true;
+      settings.direction = "float";
+      settings.shell = "fish";
+    };
     vim-surround.enable = true;
     web-devicons.enable = true;
   };
