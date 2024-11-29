@@ -154,7 +154,7 @@ in
           );
           sqlformat.enable = true;
           stylua.enable = true;
-          yamlfmt.enable = true;
+          yamlfmt.enable = false;
         };
         sources.diagnostics = {
           trivy.enable = true;
@@ -170,11 +170,11 @@ in
             timeout_ms = 500;
           };
           notify_on_error = true;
-
           formatters_by_ft = {
             css = ["prettier"];
             html = ["prettier"];
             json = ["prettier"];
+            python = ["ruff_format"];
             just = ["just"];
             lua = ["stylua"];
             markdown = ["prettier"];
@@ -244,7 +244,28 @@ in
           nil_ls.enable = true;
           nixd.enable = true;
           yamlls.enable = true;
+          helm_ls.enable = true;
           taplo.enable = true;
+          pylsp = {
+            enable = true;
+            settings = {
+              plugins = {
+                flake8.enabled = true;
+                flake8.maxLineLength = 130;
+                isort.enabled = true;
+                jedi.enabled = true;
+                mccabe.enabled = true;
+                pycodestyle.enabled = true;
+                pycodestyle.maxLineLength = 130;
+                pydocstyle.enabled = false;
+                pyflakes.enabled = false;
+                pylint.enabled = true;
+                rope.enabled = true;
+                yapf.enabled = true;
+                ruff.enabled = true;
+              };
+            };
+          };
         };
       };
 

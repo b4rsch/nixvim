@@ -29,6 +29,16 @@
       saveOnChange = true;
       enterOnSendcmd = false;
       markBranch = true;
+      keymaps = {
+        addFile = "<leader>a";
+        toggleQuickMenu = "<C-e>";
+        navFile = {
+          "1" = "<C-j>";
+          "2" = "<C-k>";
+          "3" = "<C-l>";
+          "4" = "<C-m>";
+        };
+      };
     };
 
     hop.enable = true;
@@ -79,7 +89,7 @@
       folding = false;
       settings.indent.enable = true;
     };
-
+    molten.enable = true;
     toggleterm = {
       enable = true;
       settings.direction = "float";

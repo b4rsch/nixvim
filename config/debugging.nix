@@ -9,6 +9,7 @@
           floating.mappings = {close = ["<ESC>" "q"];};
         };
         dap-virtual-text = {enable = true;};
+        dap-python.enable = true;
       };
       signs = {
         dapBreakpoint = {

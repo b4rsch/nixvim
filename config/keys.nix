@@ -25,5 +25,11 @@
       action = "<CMD>q<CR>";
       options.desc = "Terminal";
     }
+    {
+      mode = "n";
+      key = "<leader>'";
+      action = "<CMD>noh<CR>";
+      options.desc = "remove search highlighting";
+    }
   ];
 }

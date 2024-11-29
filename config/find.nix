@@ -51,6 +51,14 @@
           action = "files";
           options.desc = "File";
         };
+        "<leader>fw" = {
+          action = "grep_cword";
+          options.desc = "Word";
+        };
+        "<leader>f@" = {
+          action = "grep_cWORD";
+          options.desc = "WORD";
+        };
       };
     };
     telescope.enable = true;
