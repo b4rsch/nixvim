@@ -145,6 +145,7 @@ in
           hclfmt.enable = true;
           just.enable = true;
           opentofu_fmt.enable = true;
+          golines.enable = true;
           prettier.enable = true;
           # rubyfmt is broken on darwin-based systems
           rubyfmt.enable = (
@@ -171,15 +172,19 @@ in
           };
           notify_on_error = true;
           formatters_by_ft = {
-            css = ["prettier"];
-            html = ["prettier"];
-            json = ["prettier"];
-            python = ["ruff_format"];
+            css = ["prettierd" "prettier"];
+            html = ["prettierd" "prettier"];
+            javascript = ["prettierd" "prettier"];
+            typescript = ["prettierd" "prettier"];
+            go = ["golines"];
+            json = ["prettierd" "prettier"];
             just = ["just"];
             lua = ["stylua"];
             markdown = ["prettier"];
             nix = ["alejandra"];
+            python = ["ruff_format"];
             ruby = ["rubyfmt"];
+            svelte = ["prettierd" "prettier"];
             terraform = ["tofu_fmt"];
             tf = ["tofu_fmt"];
             yaml = ["yamlfmt"];
@@ -239,6 +244,7 @@ in
           end
         '';
         servers = {
+          gopls.enable = true;
           jsonls.enable = true;
           marksman.enable = true;
           nil_ls.enable = true;
@@ -246,6 +252,7 @@ in
           yamlls.enable = true;
           helm_ls.enable = true;
           taplo.enable = true;
+          svelte.enable = true;
           pylsp = {
             enable = true;
             settings = {
