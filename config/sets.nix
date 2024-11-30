@@ -1,7 +1,6 @@
 {
   plugins = {
     auto-save.enable = true;
-    snacks.enable = true;
 
     gitsigns = {
       enable = true;
