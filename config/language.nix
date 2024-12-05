@@ -182,7 +182,7 @@ in
             lua = ["stylua"];
             markdown = ["prettier"];
             nix = ["alejandra"];
-            python = ["ruff_format"];
+            python = ["ruff_format" "ruff_organize_imports" "ruff_fix"];
             ruby = ["rubyfmt"];
             svelte = ["prettierd" "prettier"];
             terraform = ["tofu_fmt"];
