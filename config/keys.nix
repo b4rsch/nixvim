@@ -31,5 +31,10 @@
       action = "<CMD>noh<CR>";
       options.desc = "remove search highlighting";
     }
+    {
+      mode = "x";
+      key = "<leader>p";
+      action.__raw = ''[["_dP]]'';
+    }
   ];
 }
