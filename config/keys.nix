@@ -82,5 +82,23 @@
       '';
       options.remap = true;
     }
+    {
+      mode = "n";
+      key = "<leader>S";
+      action = "<cmd>lua require('spectre').toggle()<CR>";
+      options.remap = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>sw";
+      action = "<cmd>lua require('spectre').open_visual({select_word=true})<CR>";
+      options.remap = true;
+    }
+    {
+      mode = "v";
+      key = "<leader>sw";
+      action = "<cmd>lua require('spectre').open_visual()<CR>";
+      options.remap = true;
+    }
   ];
 }
