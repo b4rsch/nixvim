@@ -1,0 +1,7 @@
+{
+  plugins = {
+    hop = {
+      enable = true;
+    };
+  };
+}
