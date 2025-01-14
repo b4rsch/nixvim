@@ -183,7 +183,6 @@ in
             markdown = ["prettier"];
             nix = ["alejandra"];
             python = ["ruff_format" "ruff_organize_imports" "ruff_fix"];
-            ruby = ["rubyfmt"];
             svelte = ["prettierd" "prettier"];
             terraform = ["tofu_fmt"];
             tf = ["tofu_fmt"];
@@ -252,27 +251,28 @@ in
           yamlls.enable = true;
           helm_ls.enable = true;
           taplo.enable = true;
+          pyright.enable = true;
           svelte.enable = true;
-          pylsp = {
-            enable = true;
-            settings = {
-              plugins = {
-                flake8.enabled = true;
-                flake8.maxLineLength = 130;
-                isort.enabled = true;
-                jedi.enabled = true;
-                mccabe.enabled = true;
-                pycodestyle.enabled = true;
-                pycodestyle.maxLineLength = 130;
-                pydocstyle.enabled = false;
-                pyflakes.enabled = false;
-                pylint.enabled = true;
-                rope.enabled = true;
-                yapf.enabled = true;
-                ruff.enabled = true;
-              };
-            };
-          };
+          # pylsp = {
+          #   enable = true;
+          #   settings = {
+          #     plugins = {
+          #       flake8.enabled = true;
+          #       flake8.maxLineLength = 130;
+          #       isort.enabled = true;
+          #       jedi.enabled = true;
+          #       mccabe.enabled = true;
+          #       pycodestyle.enabled = true;
+          #       pycodestyle.maxLineLength = 130;
+          #       pydocstyle.enabled = false;
+          #       pyflakes.enabled = false;
+          #       pylint.enabled = true;
+          #       rope.enabled = true;
+          #       yapf.enabled = true;
+          #       ruff.enabled = true;
+          #     };
+          #   };
+          # };
         };
       };
 
