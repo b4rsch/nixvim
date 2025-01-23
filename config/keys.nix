@@ -100,5 +100,11 @@
       action = "<cmd>lua require('spectre').open_visual()<CR>";
       options.remap = true;
     }
+    {
+      mode = "n";
+      key = "<leader>s";
+      action = "[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]";
+      options.remap = true;
+    }
   ];
 }
