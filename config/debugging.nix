@@ -8,7 +8,6 @@
           enable = true;
           floating.mappings = {close = ["<ESC>" "q"];};
         };
-        dap-virtual-text = {enable = true;};
         dap-python.enable = true;
       };
       signs = {
@@ -213,6 +212,97 @@
     require('dap').listeners.after.event_initialized['dapui_config'] = require('dapui').open
     require('dap').listeners.before.event_terminated['dapui_config'] = require('dapui').close
     require('dap').listeners.before.event_exited['dapui_config'] = require('dapui').close
+      local dap = require("dap")
+        -- python
+        require("dap-python")
+        --- mueller
+        dap.configurations.python = {
+          {
+            name = "Pictures API",
+            type = "debugpy",
+            request = "attach",
+            connect = { host = "0.0.0.0", port = 5678 },
+            pathMappings = {
+              {
+                localRoot = "''${workspaceFolder}/common_code_snippets/common_code_snippets",
+                remoteRoot = "/common_code_snippets/common_code_snippets",
+              },
+              {
+                localRoot = "''${workspaceFolder}/pictures_api/pictures_api",
+                remoteRoot = "/pictures_api/pictures_api",
+              },
+            },
+            console = "integratedTerminal",
+          },
+          {
+            name = "PIM API",
+            type = "debugpy",
+            request = "attach",
+            connect = { host = "0.0.0.0", port = 5677 },
+            pathMappings = {
+              {
+                localRoot = "''${workspaceFolder}/common_code_snippets/common_code_snippets",
+                remoteRoot = "/common_code_snippets/common_code_snippets",
+              },
+              {
+                localRoot = "''${workspaceFolder}/pim_api/pim_api",
+                remoteRoot = "/pim_api/pim_api",
+              },
+            },
+            console = "integratedTerminal",
+          },
+          {
+            name = "Translator API",
+            type = "debugpy",
+            request = "attach",
+            connect = { host = "0.0.0.0", port = 5676 },
+            pathMappings = {
+              {
+                localRoot = "''${workspaceFolder}/common_code_snippets/common_code_snippets",
+                remoteRoot = "/common_code_snippets/common_code_snippets",
+              },
+              {
+                localRoot = "''${workspaceFolder}/translator_api/translator_api",
+                remoteRoot = "/translator_api/translator_api",
+              },
+            },
+            console = "integratedTerminal",
+          },
+          {
+            name = "Normalizer API",
+            type = "debugpy",
+            request = "attach",
+            connect = { host = "0.0.0.0", port = 5675 },
+            pathMappings = {
+              {
+                localRoot = "''${workspaceFolder}/common_code_snippets/common_code_snippets",
+                remoteRoot = "/common_code_snippets/common_code_snippets",
+              },
+              {
+                localRoot = "''${workspaceFolder}/normalizer_api/normalizer_api",
+                remoteRoot = "/normalizer_api/normalizer_api",
+              },
+            },
+            console = "integratedTerminal",
+          },
+          {
+            name = "Leaflets API",
+            type = "debugpy",
+            request = "attach",
+            connect = { host = "0.0.0.0", port = 5674 },
+            pathMappings = {
+              {
+                localRoot = "''${workspaceFolder}/common_code_snippets/common_code_snippets",
+                remoteRoot = "/common_code_snippets/common_code_snippets",
+              },
+              {
+                localRoot = "''${workspaceFolder}/leaflets_api/leaflets_api",
+                remoteRoot = "/leaflets_api/leaflets_api",
+              },
+            },
+            console = "integratedTerminal",
+          },
+        }
   '';
 
   extraPlugins = [(pkgs.vimPlugins.telescope-dap-nvim)];
